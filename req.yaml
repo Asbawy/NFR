@@ -1,0 +1,8 @@
+method: GET
+url: 
+headers:
+  Host: 
+  Cookie: 
+  User-Agent: 
+  Accept: 
+# body: null   # for POST/PUT add body here (string or dict)
