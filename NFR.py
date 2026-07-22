@@ -332,6 +332,9 @@ def parse_raw_request(file_path: str, force_http: bool = False) -> Dict[str, Any
     for line in header_lines[1:]:
         if ":" in line:
             key, val = line.split(":", 1)
+            # Skip manual Content-Length header so HTTP client dynamically computes actual body size
+            if key.strip().lower() == "content-length":
+                continue
             headers[key.strip()] = val.strip()
 
     body_str = None
