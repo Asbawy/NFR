@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "nfr-race"
+version = "1.0.0"
+description = "High-performance asynchronous HTTP race condition testing & single-packet attack tool"
+readme = "README.md"
+authors = [{ name = "Asbawy" }]
+license = { text = "MIT" }
+requires-python = ">=3.8"
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Information Technology",
+    "Topic :: Security",
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "httpx[http2]>=0.28.0",
+    "PyYAML>=6.0",
+    "colorama>=0.4.6",
+    "tqdm>=4.66.0",
+    "h2>=4.1.0",
+    "rich>=13.7.0",
+]
+
+[project.scripts]
+nfr = "NFR:main"
+
+[project.urls]
+Homepage = "https://github.com/Asbawy/NFR"
+Repository = "https://github.com/Asbawy/NFR"

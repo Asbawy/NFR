@@ -1,4 +1,6 @@
-httpx==0.28.1
+httpx[http2]==0.28.1
 PyYAML==6.0.3
 colorama==0.4.6
 tqdm>=4.66.0
+h2>=4.1.0
+rich>=13.7.0
